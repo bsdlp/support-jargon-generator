@@ -1,7 +1,16 @@
 // select random value from source
 
-// TODO: load up the source
+type JargonSource struct {
+    Source  string `json:"source,omitempty"`
+    Jargon  string `json:"jargons,omitempty"`
+}
 
-func LoadSource(sourcePath string) (*SourceFile, error) {
+type JargonFile struct {
+    Jargons  map[string]JargonSource `json:"jargons,omitempty"`
+    filePath string
+}
+
+// TODO: load up the source
+func LoadSource(filePath string) (*JargonFile, error) {
 }
 
