@@ -11,5 +11,7 @@ type jargon struct {
 	date   time.Time
 }
 
+var jargonCollection []jargon
+
 func main() {
 }
