@@ -5,6 +5,7 @@ import (
 )
 
 type jargon struct {
+	ID     int
 	name   string
 	quote  string
 	source string
