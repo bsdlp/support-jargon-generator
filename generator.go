@@ -25,10 +25,10 @@ func main() {
 
 	sql := `
 	CREATE TABLE jargon (id integer NOT NULL PRIMARY KEY,
-						 name VARCHAR(11),
+						 name TEXT,
 						 quote TEXT,
-						 source VARCHAR(11),
-						 date TIMESTAMP)
+						 source TEXT,
+						 date INTEGER)
 	`
 	_, err = db.Exec(sql)
 	if err != nil {
