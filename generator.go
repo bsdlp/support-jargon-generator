@@ -8,11 +8,11 @@ import (
 )
 
 type jargon struct {
-	ID     int
-	name   string
-	quote  string
-	source string
-	date   time.Time
+	ID        int
+	name      string
+	quote     string
+	source    string
+	timestamp time.Time
 }
 
 var jargonCollection []jargon
@@ -29,7 +29,7 @@ func main() {
 						 name TEXT,
 						 quote TEXT,
 						 source TEXT,
-						 date INTEGER)
+						 timestamp INTEGER)
 	`
 	_, err = db.Exec(sql)
 	if err != nil {
