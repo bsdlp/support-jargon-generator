@@ -1,9 +1,10 @@
 package main
 
 import (
-	"database/sql"
 	"log"
 	"time"
+
+	"github.com/mxk/go-sqlite/sqlite3"
 )
 
 type jargon struct {
@@ -17,7 +18,7 @@ type jargon struct {
 var jargonCollection []jargon
 
 func main() {
-	db, err := sql.Open("sqlite3", "./jargon.db")
+	db, err := sqlite3.Open("sqlite3", "./jargon.db")
 	if err != nil {
 		log.Fatal(err)
 	}
